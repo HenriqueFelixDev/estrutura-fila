@@ -7,8 +7,8 @@ public class Queue<T>{
 	 * da instância da classe 						*/
 	private T[] queueElements;
 	
-	/* Armazena o tamnho atual da fila 
-	 * (indice do último elemento adicionado +1)		*/
+	/* Armazena o tamanho atual da fila 
+	 * (índice do último elemento adicionado +1)		*/
 	private int queueSize;
 	
 	// Construtor da classe Fila inicializando as variáveis
@@ -19,8 +19,8 @@ public class Queue<T>{
 	}
 	
 	// Insere um novo elemento na fila
-	public void add(T elemento) {
-		queueElements[queueSize++] = elemento;
+	public void add(T element) {
+		queueElements[queueSize++] = element;
 	}
 	
 	// Remove o primeiro elemento da fila e o retorna
@@ -77,14 +77,14 @@ public class Queue<T>{
 	// Teste do funcionamento da fila
 	public static void main(String[] args) {
 		Queue<String> fila = new Queue<String>(10);
-		System.out.println("Fila está vazia? " + fila.empty());
+		System.out.println("A fila está vazia? " + fila.empty());
 		System.out.println(fila.remove());
 		fila.add("João");
 		fila.add("Pedro");
 		fila.add("Maria");
 		System.out.println("Pessoa removida: " + fila.remove());
 		System.out.println("Próximo da Fila: " + fila.front());
-		System.out.println("Fila está vazia? " + fila.empty());
+		System.out.println("A fila está vazia? " + fila.empty());
 		System.out.println("O tamanho da fila é " + fila.size());
 		System.out.println(fila.toString());
 	}
