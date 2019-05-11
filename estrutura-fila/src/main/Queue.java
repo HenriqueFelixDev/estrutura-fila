@@ -5,11 +5,11 @@ public class Queue<T>{
 	/* Armazena os elementos presentes na fila
 	 * Seu tipo será definido no momento da criação 
 	 * da instância da classe 						*/
-	T[] queueElements;
+	private T[] queueElements;
 	
 	/* Armazena o tamnho atual da fila 
 	 * (indice do último elemento adicionado +1)		*/
-	int queueSize;
+	private int queueSize;
 	
 	// Construtor da classe Fila inicializando as variáveis
 	@SuppressWarnings("unchecked")
@@ -26,7 +26,7 @@ public class Queue<T>{
 	// Remove o primeiro elemento da fila e o retorna
 	public T remove() {
 		
-		T objetoRemovido = queueElements[0];
+		T removedElement = queueElements[0];
 		
 		/* Verificação para evitar a tentativa de remover
 		 * um elemento em uma fila vazia 					*/
@@ -39,7 +39,7 @@ public class Queue<T>{
 			queueElements[--queueSize] = null;
 		}
 		
-		return objetoRemovido;
+		return removedElement;
 	}
 	
 	// Retorna o primeiro elemento da fila, mas sem removê-lo
